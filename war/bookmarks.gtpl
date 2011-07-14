@@ -6,7 +6,7 @@
 <h2>Bookmarks</h2>
 
 <% if (user) { %>
-    <p>Logged In as <%= user.email %>. <a href="<%= users.createLogoutURL(request.requestURI) %>">Log out</a></p>
+    <p>Logged In as <%= user.email %>. <a href="<%= users.createLogoutURL('/bookmarks') %>">Log out</a></p>
 	<% if (bookmarks) { %>
 		<table>
   			<tr>	
@@ -26,7 +26,7 @@
 	<hr />
 	<% include '/WEB-INF/includes/bookmarkForm.gtpl' %>
 <% } else { %>
-	<p>You need to <a href="<%= users.createLoginURL(request.requestURI) %>">Log in</a> to see your bookmarks</p>
+	<p>You need to <a href="<%= users.createLoginURL('/bookmarks') %>">Log in</a> to see your bookmarks</p>
 <% } %>
 
 <% include '/WEB-INF/includes/footer.gtpl' %> 

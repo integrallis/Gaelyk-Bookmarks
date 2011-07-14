@@ -14,8 +14,8 @@ try {
 			
 		request.setAttribute 'bookmarks', bookmarks	
 	}
-	forward 'bookmarks.gtpl'	
+	forward '/bookmarks.gtpl'	
 } catch (Throwable t) {
     log.info "kaboom ${t.message}"
-	forward 'bookmarks.gtpl'
+	forward '/bookmarks.gtpl'
 }

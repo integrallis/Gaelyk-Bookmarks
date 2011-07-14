@@ -9,4 +9,4 @@ bookmark.save()
 
 log.info "Create bookmark with url ${params.url} for user ${user.nickname}"
 
-redirect "listBookmarks.groovy"
+redirect "/bookmarks"
