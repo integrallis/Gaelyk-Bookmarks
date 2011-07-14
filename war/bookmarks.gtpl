@@ -17,6 +17,7 @@
 			<tr>	  	
 				<td>${bookmark.url} </td>
 				<td>${formatter.format(bookmark.createdAt)}</td>
+				<td>[<a href="/bookmarks/${bookmark.key.id}/edit">Edit</a>]</td>
 			</tr> 
 			<% } %>  	
  		</table>
