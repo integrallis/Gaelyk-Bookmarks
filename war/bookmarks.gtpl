@@ -12,11 +12,13 @@
   			<tr>	
 				<th>URL</th>
 				<th>Created at</th>	
+				<th>Image</th>
   			</tr>
 			<% bookmarks.each { bookmark -> %>   	
 			<tr>	  	
 				<td>${bookmark.url} </td>
 				<td>${formatter.format(bookmark.createdAt)}</td>
+				<td><a href="${bookmark.imageUrl ?: '.'}">${bookmark.imageFileName ?: "none"}</a></td>
 				<td>[<a href="/bookmarks/${bookmark.key.id}/edit">Edit</a>]</td>
 			</tr> 
 			<% } %>  	
